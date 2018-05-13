@@ -1,0 +1,22 @@
+{
+  "name": "puppeteer-spider",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MuyePeikon/puppeteer-spider.git"
+  },
+  "author": "Peikon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MuyePeikon/puppeteer-spider/issues"
+  },
+  "homepage": "https://github.com/MuyePeikon/puppeteer-spider#readme",
+  "dependencies": {
+    "puppeteer": "^1.4.0"
+  }
+}
