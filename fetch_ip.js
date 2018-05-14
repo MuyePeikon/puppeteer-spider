@@ -8,6 +8,13 @@ const puppeteer = require('puppeteer');
     'args': ['--no-sandbox']
   });
   const page = await browser.newPage();
+  try {
+    fs.accessSync('output/ip_ports.txt');
+    fs.unlinkSync('output/ip_ports.txt');
+    console.log('ip_ports.txt has been deleted!');
+  } catch (err) {
+    console.log('ip_ports.txt does not existed!');
+  }
   const url = 'http://www.xicidaili.com/nn';
 	await fetch_url(page, url, 10);
   await browser.close();
@@ -38,7 +45,8 @@ async function filter_ip (ip_list) {
   let input = await inquirer.prompt({
     type: 'input',
     name: 'perc',
-    message: 'Input pass percentage: (0-100)'
+    message: 'Input pass percentage: (0-100)',
+    default: 20
   });
   let perc = +input.perc;
   ip_list = ip_list.filter(ip => {
