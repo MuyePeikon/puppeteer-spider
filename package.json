@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/MuyePeikon/puppeteer-spider#readme",
   "dependencies": {
+    "inquirer": "^5.2.0",
     "puppeteer": "^1.4.0"
   }
 }
